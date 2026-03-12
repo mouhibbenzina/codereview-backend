@@ -4,7 +4,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const reviewCode = async (code, language) => {
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
     const prompt = `
 You are an expert code reviewer. Analyze this ${language} code.
 Respond ONLY with valid JSON, no markdown, no backticks:
